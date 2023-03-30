@@ -1,10 +1,15 @@
 
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Basket from './component/Basket';
+
 // import Clicker from './component/Clicker';
 // import Wrapper from './component/Wrapper';
 import { themes, ThemeContext } from './contexts/theme-context'
+
+import CatalogPage from './component/CatalogPage';
+import About from './component/About';
+import Basket from './component/Basket';
 
 
 function App() {
@@ -47,16 +52,49 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Wrapper> */}
-        <h1>Корзина</h1>
-        {/* </Wrapper> */}
-
         {/* <Clicker />
         <Clicker value={3}/> */}
 
         {/* <Wrapper color="green"> */}
-        {basketPlace}
+        {/* {basketPlace} */}
         {/* </Wrapper> */}
+
+        <div>
+          <BrowserRouter>
+            <nav className="App-nav">
+              <ul>
+                <li>
+                  <Link to="/">Главная</Link>
+                </li>
+                <li>
+                  <Link to="/basket">Корзина</Link>
+                </li>
+                <li>
+                  <Link to="/about">О нас</Link>
+                </li>
+                <li>
+                  <Link to="/react-router">О рутинге</Link>
+                </li>
+              </ul>
+            </nav>
+            <Routes>
+              <Route path="/" element={<CatalogPage />} />
+              <Route path="/basket" element={basketPlace} />
+              <Route path="/about" element={<About />} />
+              <Route
+                path="/react-router"
+                element={
+                  <div>
+                    <h1>React Router</h1>
+                    <div>
+                      Тут можно прочитать о <a href="https://reactrouter.com/" target="_blank" rel="noreferrer">React Router</a>
+                    </div>
+                  </div>
+                }
+              />
+            </Routes>
+          </BrowserRouter>
+        </div>
       </header>
     </div>
   );

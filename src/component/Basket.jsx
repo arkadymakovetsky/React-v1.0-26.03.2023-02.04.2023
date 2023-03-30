@@ -1,4 +1,4 @@
-import React from 'react'; //, { useContext }
+import React from 'react';
 import './Basket.css';
 
 import BasketHeader from "./BasketHeader";
@@ -26,34 +26,38 @@ const Basket = (props) => {
         <ThemeContext.Consumer>
             {({ theme, setTheme }) => {
                 return (
-                    <div className={"Basket Basket-" + theme}>
-                        {/* <div className="Basket"> */}
-                        <BasketHeader count={countItemsInBasket} />
-                        <div className="Basket__items">
-                            {items.map((item) => (
-                                <BasketItem {...item} key={item.uid} items={items} setItems={setItems} />
-                            ))}
-                            <BasketPromoInfo code={"REACTSPECIALIST"} />
-                            <BasketTotal value={amountTotal} currency={"₽"} />
+                    <div>
+                        <h1>Корзина</h1>
+                        <div className={"Basket Basket-" + theme}>
+
+                            {/* <div className="Basket"> */}
+                            <BasketHeader count={countItemsInBasket} />
+                            <div className="Basket__items">
+                                {items.map((item) => (
+                                    <BasketItem {...item} key={item.uid} items={items} setItems={setItems} />
+                                ))}
+                                <BasketPromoInfo code={"REACTSPECIALIST"} />
+                                <BasketTotal value={amountTotal} currency={"₽"} />
+                            </div>
+                            <BasketPromoCode code={""} />
+                            <Button
+                                value="Продолжить покупку"
+                                onClickHandler={() => alert("Продолжить")}
+                                className="btn-proceed"
+                            />
+                            <Button
+                                value="Темная тема"
+                                onClickHandler={() => setTheme(themes.dark)}
+                            />
+                            <Button
+                                value="Светлая тема"
+                                onClickHandler={() => setTheme(themes.light)}
+                            />
+                            <Button
+                                value="Отладка"
+                                onClickHandler={() => setTheme(themes.debug)}
+                            />
                         </div>
-                        <BasketPromoCode code={""} />
-                        <Button
-                            value="Продолжить покупку"
-                            onClickHandler={() => alert("Продолжить")}
-                            className="btn-proceed"
-                        />
-                        <Button
-                            value="Темная тема"
-                            onClickHandler={() => setTheme(themes.dark)}
-                        />
-                        <Button
-                            value="Светлая тема"
-                            onClickHandler={() => setTheme(themes.light)}
-                        />
-                        <Button
-                            value="Отладка"
-                            onClickHandler={() => setTheme(themes.debug)}
-                        />
                     </div>
                 );
             }}
