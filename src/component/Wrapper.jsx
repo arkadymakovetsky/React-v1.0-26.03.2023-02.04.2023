@@ -3,7 +3,6 @@ import './Wrapper.css';
 import PropTypes from 'prop-types'
 
 const Wrapper = (props) => {
-    console.log(props.children);
     return (
         <div className={'Wrapper Wrapper-' + props.color}>
             {props.children}

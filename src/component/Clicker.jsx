@@ -3,7 +3,7 @@ import './Button.css';
 
 const Clicker = ({ value }) => {
     const [num, setNum] = useState(value); // useState(value ?? 0)
-    const [isDark, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(!!value%2);
 
     const clickHandler = (ev) => {
         setNum(num + 1);

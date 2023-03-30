@@ -1,6 +1,9 @@
 .Wrapper{
-    border: 10px solid rgb(184, 34, 34);
+    border: 3px solid rgb(184, 34, 34);
 }
 .Wrapper-green{
-    border: 10px solid rgb(25, 112, 25);
+    border: 3px solid rgb(82, 212, 82);
+}
+.Wrapper-blue{
+    border: 3px solid rgb(163, 177, 255);
 }
