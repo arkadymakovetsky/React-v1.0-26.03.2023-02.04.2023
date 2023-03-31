@@ -121,7 +121,7 @@ function App() {
                 </ul>
               </nav>
               <Routes>
-                <Route path="/" element={<CatalogPage />} />
+                <Route path="/" element={<CatalogPage basketItems={startItems}/>} />
                 <Route path="/basket" element={basketPlace} />
                 <Route path="/about" element={<About />} />
                 <Route

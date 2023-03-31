@@ -18,7 +18,7 @@
 }
 
 .CatalogPage_sort_item {
-    min-width: 120px;
+    min-width: 140px;
     height: 20px;
     text-align: center;
     line-height: 1.8em;
@@ -34,7 +34,7 @@
 
 .CatalogProduct {
     width: 30%;
-    height: 200px;
+    height: 250px;
     margin: 5px 0;
     border: 1px solid rgb(233, 233, 233);
     border-radius: 3px;
@@ -44,8 +44,9 @@
     font-size: 0.8em;
 }
 
+.CatalgProduct_title,
 .CatalgProduct_description {
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 .CatalgProduct_addtobasket {
@@ -56,14 +57,16 @@
 }
 
 .CatalgProduct_image {
-    width: 100%;
-    height: 100px;
+    width: 60%;
+    height: 50%;
 }
 
 .CatalogProduct h3,
+.CatalgProduct_title,
 .CatalgProduct_price,
+.CatalgProduct_star,
 .CatalgProduct_description {
-    padding: 0 10px;
+    padding: 4px 10px;
 }
 
 .CatalogPage_link {
@@ -86,13 +89,14 @@
 }
 
 .Catalog_items__list .CatalgProduct_image {
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
 
 .Catalog_items__list .CatalgProduct_addtobasket {
     height: 26px;
     width: 90px;
-    font-size: 0.5em;
+    font-size: 0.7em;
 }
 
 .CatalgProduct_star {
@@ -100,12 +104,12 @@
 }
 
 .Catalog_items__list .CatalgProduct_star {
-    width: 100px;
+    width: 70px;
     font-size: 0.8em;
 }
 
-.Catalog_items__list .CatalogProduct h3 {
-    width: 200px;
+.Catalog_items__list .CatalgProduct_title{
+    width: 220px;
 }
 
 .Catalog_items__list .CatalgProduct_price {
@@ -114,5 +118,5 @@
 }
 
 .Catalog_items__list .CatalgProduct_description {
-    width: 100px;
+    width: 240px;
 }

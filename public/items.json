@@ -1,30 +1,23 @@
 [
     {
         "uid": "86ed58db-082d-45ab-aa81-5218059349cb",
-        "title": "Товар1",
-        "description": "описание товара 1",
-        "price": 1200,
+        "title": "Скалярия зебра (1)",
+        "description": "Описание товара 1",
+        "price": 200,
         "qty": 1
     },
     {
-        "uid": "05542e59-7a90-4e80-bf9d-78967f272049",
-        "title": "Товар2",
-        "description": "описание товара 2",
-        "price": 800,
+        "uid": "cdd8a823-a96e-4d91-90bf-fa4f96aa1bb1",
+        "title": "Боция-клоун (2)",
+        "description": "Описание товара 2",
+        "price": 500,
         "qty": 1
     },
     {
-        "uid": "7793e4f0-fe86-47cc-98f6-e01b6beeb3af",
-        "title": "Товар3",
-        "description": "описание товара 3",
-        "price": 250,
-        "qty": 5
-    },
-    {
-        "uid": "7793e4f0-fe86-47cc-98f6-e01b6beeb3ad",
-        "title": "Товар4",
-        "description": "описание товара 4",
-        "price": 120,
-        "qty": 123
+        "uid": "26c4c669-7a50-4b8a-85dd-8d038f0ee30a",
+        "title": "Расбора феникс (3)",
+        "description": "Описание товара 3",
+        "price": 80,
+        "qty": 0
     }
 ]

@@ -29,8 +29,6 @@ const Basket = (props) => {
                     <div>
                         <h1>Корзина</h1>
                         <div className={"Basket Basket-" + theme}>
-
-                            {/* <div className="Basket"> */}
                             <BasketHeader count={countItemsInBasket} />
                             <div className="Basket__items">
                                 {items.map((item) => (

@@ -15,7 +15,7 @@ const Counter = ({ value, uid, items, setItems }) => {
         newItems[index].qty++;
 
         setItems(newItems);
-    };
+    }
 
     const qtyButtonSub = () => {
         let newItems = items.slice();
