@@ -44,28 +44,28 @@
     font-size: 0.8em;
 }
 
-.CatalgProduct_title,
-.CatalgProduct_description {
+.CatalogProduct_title,
+.CatalogProduct_description {
     font-size: 0.7em;
 }
 
-.CatalgProduct_addtobasket {
+.CatalogProduct_addtobasket {
     text-decoration: none;
     display: inline-block;
     font-size: 0.7em;
     margin-left: 10px;
 }
 
-.CatalgProduct_image {
+.CatalogProduct_image {
     width: 60%;
     height: 50%;
 }
 
 .CatalogProduct h3,
-.CatalgProduct_title,
-.CatalgProduct_price,
-.CatalgProduct_star,
-.CatalgProduct_description {
+.CatalogProduct_title,
+.CatalogProduct_price,
+.CatalogProduct_star,
+.CatalogProduct_description {
     padding: 4px 10px;
 }
 
@@ -88,35 +88,35 @@
     width: 100%;
 }
 
-.Catalog_items__list .CatalgProduct_image {
+.Catalog_items__list .CatalogProduct_image {
     height: 100px;
     width: 100px;
 }
 
-.Catalog_items__list .CatalgProduct_addtobasket {
+.Catalog_items__list .CatalogProduct_addtobasket {
     height: 26px;
     width: 90px;
     font-size: 0.7em;
 }
 
-.CatalgProduct_star {
+.CatalogProduct_star {
     color: rgb(253, 186, 2);
 }
 
-.Catalog_items__list .CatalgProduct_star {
+.Catalog_items__list .CatalogProduct_star {
     width: 70px;
     font-size: 0.8em;
 }
 
-.Catalog_items__list .CatalgProduct_title{
+.Catalog_items__list .CatalogProduct_title{
     width: 220px;
 }
 
-.Catalog_items__list .CatalgProduct_price {
+.Catalog_items__list .CatalogProduct_price {
     width: 50px;
     font-size: 0.8em;
 }
 
-.Catalog_items__list .CatalgProduct_description {
+.Catalog_items__list .CatalogProduct_description {
     width: 240px;
 }

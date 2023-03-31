@@ -38,7 +38,7 @@ function App() {
       <Button
         key="2"
         value="Кнопка"
-        onClickHandler={() => {alert(1)}}
+        onClickHandler={() => { alert(1) }}
       />
     ]}
   >
@@ -75,12 +75,14 @@ function App() {
   } else if (!isLoaded) {
     basketPlace = <div>Загрузка...</div>;
   } else {
-    basketPlace = <Basket items={startItems} />
+    basketPlace = <Basket items={startItems} setItems={setStartItems} />
   }
 
-  basketPlace = <ThemeContext.Provider value={{ theme, setTheme }}>
-    {basketPlace}
-  </ThemeContext.Provider>
+  basketPlace = (
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      {basketPlace}
+    </ThemeContext.Provider>
+  )
 
   return (
     <div className="App">
@@ -104,24 +106,24 @@ function App() {
               <nav className="App-nav">
                 <ul>
                   <li>
-                    <Link to="/">Главная</Link>
+                    <Link to="/" id="main_menu_home">Главная</Link>
                   </li>
                   <li>
-                    <Link to="/basket">Корзина</Link>
+                    <Link to="/basket" id="main_menu_basket">Корзина</Link>
                   </li>
                   <li>
-                    <Link to="/about">О нас</Link>
+                    <Link to="/about" id="main_menu_about">О нас</Link>
                   </li>
                   <li>
-                    <Link to="/react-router">О рутинге</Link>
+                    <Link to="/react-router" id="main_menu_react_router">О рутинге</Link>
                   </li>
                   <li>
-                    <Link onClick={(ev) => {ev.preventDefault(); setIsShow(true)}}>{name}</Link>
+                    <Link onClick={(ev) => { ev.preventDefault(); setIsShow(true) }}>{name}</Link>
                   </li>
                 </ul>
               </nav>
               <Routes>
-                <Route path="/" element={<CatalogPage basketItems={startItems}/>} />
+                <Route path="/" element={<CatalogPage basketItems={startItems} />} />
                 <Route path="/basket" element={basketPlace} />
                 <Route path="/about" element={<About />} />
                 <Route

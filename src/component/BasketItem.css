@@ -2,6 +2,12 @@
   display: flex;
   border: 1px solid rgb(235, 235, 235);
 }
+
 .BasketItem:hover {
   background: rgba(245, 245, 245, 0.5);
+}
+
+.BasketItemDelete {
+  padding: 0px 5px;
+  line-height: 2em;
 }

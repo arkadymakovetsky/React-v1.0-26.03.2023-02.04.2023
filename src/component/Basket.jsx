@@ -11,16 +11,20 @@ import Button from "./Button";
 import { themes, ThemeContext } from "../contexts/theme-context";
 
 
-const Basket = (props) => {
+const Basket = ({ items, setItems }) => {
+    // const [items, setItems] = React.useState(props.items);
 
-    const [items, setItems] = React.useState(props.items);
+    const clickTopMenuHandler = (ev) => {
+        document.getElementById('main_menu_home').click();
+    }
 
     const countItemsInBasket = items.reduce(
         (acc, next) => acc + next.qty, 0
-    );
+    )
+    
     const amountTotal = items.reduce(
         (acc, next) => acc + next.price * next.qty, -500
-    );
+    )
 
     return (
         <ThemeContext.Consumer>
@@ -39,9 +43,9 @@ const Basket = (props) => {
                             </div>
                             <BasketPromoCode code={""} />
                             <Button
-                                value="Продолжить покупку"
-                                onClickHandler={() => alert("Продолжить")}
                                 className="btn-proceed"
+                                value="Продолжить покупку"
+                                onClickHandler={clickTopMenuHandler}
                             />
                             <Button
                                 value="Темная тема"

@@ -24,13 +24,13 @@ const items = [
     },
     {
         "uid": "7793e4f0-fe86-47cc-98f6-e01b6beeb3af",
-        "title": "Апистограмма Рамирези - золотая",
-        "title_eng": "Microgeophagus ramirezi var.",
-        "description": "Одна из самых нарядных цихлид. Это, наряду с небольшими размерами и мирным поведением, обеспечивает ей огромную популярность среди как начинающих, так и опытных аквариумистов.",
-        "src": "/img/A8f52.jpg",
+        "title": "Гурами жемчужный",
+        "title_eng": "Trichogaster leerii",
+        "description": "Популярная рыба с исключительно привлекательной окраской. Отличается относительной неприхотливостью, грациозностью, спокойным характером. Большую часть времени проводит в средних и верхних горизонтах воды. Ареал: Юго-Восточная Азия. Максимальный размер - 12 см. Минимальный объем аквариума - от 30-40 л на одну пару.",
+        "src": "/img/A9q50.jpg",
         "price": 195,
-        "qty": 2,
-        "rating": 3
+        "qty": 32,
+        "rating": 4
     },
     {
         "uid": "cdd8a823-a96e-4d91-90bf-fa4f96aa1bb1",
@@ -44,20 +44,20 @@ const items = [
     },
     {
         "uid": "26c4c669-7a50-4b8a-85dd-8d038f0ee30a",
-        "title": "Расбора феникс",
+        "title": "Расбора феникс (Расбора мера)",
         "title_eng": "Boraras merah",
         "description": "Стайная спокойная рыба. Обычный размер в аквариуме 1-1,5 см. Самцы обладают более насыщенной окраской и более стройным сложением. Для содержания предпочтительна мягкая, кислая вода (pH 5,0-7,0)",
         "src": "/img/A2t63.jpg",
         "price": 90,
         "qty": 40,
-        "rating": 4
+        "rating": 3
     },
     {
         "uid": "ab8c9640-4033-4ac0-8d46-98af19b76245",
-        "title": "Неон голубой",
-        "title_eng": "Paracheirodon innesi",
-        "description": "Благодаря своей подвижности, исключительной неприхотливости, миролюбию эта стайная рыба стала одной из самых популярных. Она подходит как новичкам, так и опытным аквариумистам. Особо выгодно смотрятся в водоемах с приглушенным освещением с темными растениями и грунтом. Аранжировка должна обеспечить наличие свободного пространства для плавания.",
-        "src": "/img/A1s50.jpg",
+        "title": "Неон красный",
+        "title_eng": "Paracheirodon axelrodi",
+        "description": "Цветовая форма (возможно, мутационного происхождения) одной из самых популярных аквариумных рыб – красного неона. Отличается своеобразной мягкой, нарядной окраской, миролюбием. Идеально подходит для общего аквариума с другими спокойными обитателями южноамериканских водоемов. Максимальный размер — 5 см.",
+        "src": "/img/A1s45.jpg",
         "price": 50,
         "qty": 100,
         "rating": 4
@@ -154,23 +154,23 @@ const CatalogPage = (props) => {
 
                 }).map((item, index) => (
                     <div className='CatalogProduct' key={item.uid}>
-                        <img src={item.src} className='CatalgProduct_image' alt={item.title} />
+                        <img src={item.src} className='CatalogProduct_image' alt={item.title} />
 
-                        <div className='CatalgProduct_title'>
+                        <div className='CatalogProduct_title'>
                             <strong>{view === 'list' ? item.title : item.title.slice(0, 33)}</strong>
                             <br />
                             <em>{view === 'list' ? item.title_eng : item.title_eng.slice(0, 33)}</em>
                         </div>
 
-                        <div className='CatalgProduct_price'>
+                        <div className='CatalogProduct_price'>
                             {item.price}₽
                         </div>
 
-                        {view === 'list' ? <div className='CatalgProduct_description'> {item.description.slice(0, 230)}</div> : null}
+                        {view === 'list' ? <div className='CatalogProduct_description'> {item.description.slice(0, 230)}</div> : null}
 
-                        <div className='CatalgProduct_star' dangerouslySetInnerHTML={{ __html: '&starf;'.repeat(item.rating) }} />
+                        <div className='CatalogProduct_star' dangerouslySetInnerHTML={{ __html: '&starf;'.repeat(item.rating) }} />
 
-                        <button className='btn CatalgProduct_addtobasket' onClick={ev => { ev.preventDefault(); addItemToBasket(item) }}>
+                        <button className='btn CatalogProduct_addtobasket' onClick={ev => { ev.preventDefault(); addItemToBasket(item) }}>
                             В корзину
                         </button>
                     </div>
