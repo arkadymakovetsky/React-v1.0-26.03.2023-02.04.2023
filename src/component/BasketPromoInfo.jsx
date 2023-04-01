@@ -4,6 +4,8 @@ import './BasketPromoInfo.css';
 import ItemPrice from './ItemPrice'
 
 const BasketPromoInfo = ({ code }) => {
+    const promoValue = code.length > 0 ? -500 : 0;
+
     return (
         <div className="BasketPromoInfo">
             <div className='BasketPromoInfo_main'>
@@ -11,7 +13,7 @@ const BasketPromoInfo = ({ code }) => {
                 <p className="BasketPromoInfo_description">{code}</p>
             </div>
             <div className='BasketPromoInfo_price'>
-                <ItemPrice value={-500} currency={'₽'} />
+                <ItemPrice value={promoValue} currency={'₽'} />
             </div>
         </div>
     );

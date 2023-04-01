@@ -21,6 +21,9 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [theme, setTheme] = useState(themes.light);
 
+  // Состояние для хранения промокода
+  const [promoCode, setPromoCode] = useState('REACTSPECIALIST');
+
   // Состояния для модального окна:
   // - флаг для отображения окна
   const [isShow, setIsShow] = useState(false);
@@ -75,7 +78,7 @@ function App() {
   } else if (!isLoaded) {
     basketPlace = <div>Загрузка...</div>;
   } else {
-    basketPlace = <Basket items={startItems} setItems={setStartItems} />
+    basketPlace = <Basket items={startItems} setItems={setStartItems} promoCode={promoCode} setPromoCode={setPromoCode} />
   }
 
   basketPlace = (

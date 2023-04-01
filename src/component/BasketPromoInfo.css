@@ -12,7 +12,13 @@
 .BasketPromoInfo_title {
   font-size: 1em;
 }
+
 .BasketPromoInfo_description {
   font-size: 0.8em;
   text-transform: uppercase;
+}
+
+.BasketPromoInfo_price {
+  padding: 10px 0px;
+  width: 70px;
 }

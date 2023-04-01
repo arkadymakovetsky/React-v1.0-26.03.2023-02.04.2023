@@ -11,8 +11,7 @@ import Button from "./Button";
 import { themes, ThemeContext } from "../contexts/theme-context";
 
 
-const Basket = ({ items, setItems }) => {
-    // const [items, setItems] = React.useState(props.items);
+const Basket = ({ items, setItems, promoCode, setPromoCode }) => {
 
     const clickTopMenuHandler = (ev) => {
         document.getElementById('main_menu_home').click();
@@ -21,9 +20,10 @@ const Basket = ({ items, setItems }) => {
     const countItemsInBasket = items.reduce(
         (acc, next) => acc + next.qty, 0
     )
-    
+
     const amountTotal = items.reduce(
-        (acc, next) => acc + next.price * next.qty, -500
+        (acc, next) => (acc + next.price * next.qty), 
+        promoCode.length > 0 ? -500 : 0
     )
 
     return (
@@ -38,10 +38,10 @@ const Basket = ({ items, setItems }) => {
                                 {items.map((item) => (
                                     <BasketItem {...item} key={item.uid} items={items} setItems={setItems} />
                                 ))}
-                                <BasketPromoInfo code={"REACTSPECIALIST"} />
+                                {promoCode.length > 0 ? <BasketPromoInfo code={promoCode} /> : null}
                                 <BasketTotal value={amountTotal} currency={"₽"} />
                             </div>
-                            <BasketPromoCode code={""} />
+                            <BasketPromoCode code={promoCode} setCode={setPromoCode} />
                             <Button
                                 className="btn-proceed"
                                 value="Продолжить покупку"
